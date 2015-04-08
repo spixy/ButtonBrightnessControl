@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Button Brightness Control</string>
+    <string name="app_name_short">BBC</string>
+    <string name="buttons_ON">Buttons ON</string>
+    <string name="buttons_OFF">Buttons OFF</string>
+    <string name="toogle_brightness">Toggle brightness</string>
+    <string name="timeout">Timeout</string>
+    <string name="ms">ms</string>
+    <string name="s">s</string>
+    <string name="infinity">infinity</string>
+    <string name="lancher_icon">Show in launcher</string>
+
+</resources>
