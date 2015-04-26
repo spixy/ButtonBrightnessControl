@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">Button Brightness Control</string>
-    <string name="app_name_short">BBC</string>
     <string name="buttons_ON">Buttons ON</string>
     <string name="buttons_OFF">Buttons OFF</string>
     <string name="toogle_brightness">Toggle brightness</string>

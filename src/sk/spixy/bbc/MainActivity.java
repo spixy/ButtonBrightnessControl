@@ -20,7 +20,7 @@ public class MainActivity extends Activity
 	{
 		try
 		{
-			boolean value = ( BrightnessControl.GetBrightness(this) == 0) ? false : true;
+			boolean value = (BrightnessControl.GetBrightness(this) != 0);
 			
 			Switch sw1 = (Switch) findViewById(R.id.switch1);
 			sw1.setChecked(value);
@@ -102,6 +102,7 @@ public class MainActivity extends Activity
 
 			public void onStopTrackingTouch(SeekBar seekBar)
 			{
+        		Log.d("GUI", "Timeout set to " + ms + " ms");
         		BrightnessControl.SetTimeout(ctx, ms);
 			}
 		});
@@ -110,12 +111,15 @@ public class MainActivity extends Activity
 	public void onBrightnessToggleClicked(View view)
 	{
 		boolean value = ((Switch) view).isChecked();
-
+		
+		Log.d("GUI", "Brightness set to " + value);
 		BrightnessControl.SetBrightness(this, value);
 	}
 	
 	public void onLauncherToggleClicked(View view)
 	{
+		Log.d("GUI", "Icon hidden from launcher");
+		
 		PackageManager p = getPackageManager();
 		p.setComponentEnabledSetting(getComponentName(), PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
 	}
